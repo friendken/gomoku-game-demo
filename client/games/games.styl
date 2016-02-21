@@ -1,0 +1,64 @@
+.game
+  display block
+  width 500px
+  margin 0 auto
+  .header-container
+    min-height 65px
+    display inline-block
+    width 100%
+    .title-game
+      float left
+      h3
+        margin-top 25px
+    .button-suggest
+      float: right;
+      position: relative;
+      top: 20px;
+  .gomoku-table
+    display inline-block
+    width 100%
+    height 500px
+    .gomoku-row
+      display inline-block
+      width 100%
+      float left
+      border 1px solid #000
+      border-bottom none
+      height 30px
+      &:last-child
+        border 1px solid #000
+      .allInfor
+        display inline-block
+        width 6.66666%
+        height 29px
+        float left
+        text-align center
+        border-right 1px solid #00
+        &:last-child
+          border none
+        .gomoku-cell
+          display inline-block
+          width 100%
+          height 29px
+          .action
+            line-height 29px
+          .action.icon-cross
+            color green
+          .action.icon-radio-unchecked
+            color red
+          &:last-child
+            border none
+
+@media (max-width:520px)
+  .game
+    width 320px
+    .gomoku-table
+      .gomoku-row
+        height 21px
+        .allInfor
+          height 21px
+          .gomoku-cell
+            height 21px
+            .action
+              line-height 21px
+              font-size 11px

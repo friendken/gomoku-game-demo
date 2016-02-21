@@ -1,0 +1,21 @@
+template(name='games')
+  .container
+    +messageResultModal
+    .game
+      .header-container
+        .title-game
+          h3 gomoku game
+        .button-suggest
+          button.btn.btn-primary Suggest Move
+    
+      unless isAvailableGame
+        h2 please wait another player join
+      else
+        .gomoku-table
+          each tableRender
+            div.gomoku-row
+              each tableRender
+                .allInfor
+                  span.gomoku-cell(data-col=this data-row='{{..}}')
+                    i.action(class='{{ stepOfGame .. .}}')
+                  abc.lest
